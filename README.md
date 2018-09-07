@@ -8,7 +8,7 @@
 Word Counter is a program that checks how frequently a word appears in a given string. The user should input both the word and a list of words to check. Check for full word matches only.
 
 ## Specification
-1. The program takes a string as an input and input string must not be an empty string.   
+1. The program takes a string as an input and input string must not be an empty string.
   input > ""
   output > "Enter non-empty value"
 
