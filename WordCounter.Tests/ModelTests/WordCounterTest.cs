@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using WordCounter.Models;
+using WordCounter;
+using System;
 
 [TestClass]
 public class WordCounterTest
@@ -17,10 +18,20 @@ public class WordCounterTest
   [TestMethod]
   public void CheckString_EmptyString_String ()
   {
-    string word = "";
+    string word = "fwe";
     RepeatCounter inputString = new RepeatCounter(word);
     string result = inputString.CheckString();
-    Assert.AreEqual("Enter non-empty value", result);
+    Assert.AreEqual(word, result);
+  }
+  [TestMethod]
+  public void SplitString_SplitBySpaces_List ()
+  {
+    string[] wordsInArray = {"google", "apple"};
+    string word = "google apple";
+    RepeatCounter inputString = new RepeatCounter(word);
+    // string gotString = inputString.GetString();
+    string[] result = inputString.SplitString();
+    CollectionAssert.AreEqual(result, wordsInArray);
   }
 
 }

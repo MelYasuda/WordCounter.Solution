@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System;
 
-namespace WordCounter.Models
+namespace WordCounter
 {
   public class RepeatCounter
   {
     private string _inputString;
+    private static List<RepeatCounter> _instances = new List<RepeatCounter> {};
 
     public RepeatCounter(string inputString)
     {
@@ -28,8 +29,14 @@ namespace WordCounter.Models
       }
       else
       {
-        return "good day";
+        return _inputString;
       }
+    }
+
+    public string[] SplitString()
+    {
+      string[] splitedString = _inputString.Split(' ');
+      return splitedString;
     }
   }
 

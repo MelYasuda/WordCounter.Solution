@@ -14,13 +14,13 @@ Word Counter is a program that checks how frequently a word appears in a given s
 
   ==>The input value is an empty string because it checks if the string is empty.
 
-2. The program splits the string into a list by spaces
+2. The program splits the string into an array by spaces
   input > "google apple"
   output > {"google", "apple"}
 
   ==>The input value is "google apple" to test if the method splits a string with more than two words by spaces
 
-3. The program checks if the list has more than two words
+3. The program checks if the array has more than two words
   input > {"google"}
   output > "Enter more than two words"
 
