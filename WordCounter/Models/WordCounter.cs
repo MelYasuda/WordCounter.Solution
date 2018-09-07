@@ -38,6 +38,21 @@ namespace WordCounter
       string[] splitedString = _inputString.Split(' ');
       return splitedString;
     }
+
+    public string CheckArray()
+    {
+      string[] splitedString = _inputString.Split(' ');
+      if(splitedString.Length < 2 )
+      {
+        return "you loser";
+      }
+      else
+      {
+        return _inputString;
+      }
+
+    
+    }
   }
 
 }

@@ -33,5 +33,14 @@ public class WordCounterTest
     string[] result = inputString.SplitString();
     CollectionAssert.AreEqual(result, wordsInArray);
   }
+  [TestMethod]
+  public void CheckArray_MoreThanTwoElements_String ()
+  {
+    string word = "google";
+    RepeatCounter inputString = new RepeatCounter(word);
+    // string gotString = inputString.GetString();
+    string result = inputString.CheckArray();
+    Assert.AreEqual(result, "you loser");
+  }
 
 }
