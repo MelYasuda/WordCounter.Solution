@@ -6,7 +6,6 @@ namespace WordCounter
   public class RepeatCounter
   {
     private string _inputString;
-    private static List<RepeatCounter> _instances = new List<RepeatCounter> {};
 
     public RepeatCounter(string inputString)
     {
@@ -21,15 +20,15 @@ namespace WordCounter
     // {
     //   _inputString = inputString;
     // }
-    public string CheckString ()
+    public bool CheckString ()
     {
       if (_inputString == "")
       {
-        return "Enter non-empty value";
+        return false;
       }
       else
       {
-        return _inputString;
+        return false;
       }
     }
 
@@ -39,16 +38,16 @@ namespace WordCounter
       return splitedString;
     }
 
-    public string CheckArray()
+    public bool CheckArray()
     {
       string[] splitedString = _inputString.Split(' ');
       if(splitedString.Length < 2 )
       {
-        return "you loser";
+        return false;
       }
       else
       {
-        return _inputString;
+        return true;
       }
     }
 
@@ -83,5 +82,37 @@ namespace WordCounter
       }
       return count;
     }
+  }
+}
+
+public class program
+{
+  public static void Main()
+  {
+    Console.WriteLine("Enter words separated by spaces");
+    Console.WriteLine("I will count how many times the first word appears");
+    string userInput = Console.ReadLine();
+    RepeatCounter inputString = new RepeatCounter(userInput);
+    string checkedString = inputString.CheckString();
+
+    if(inputString.CheckString())
+    {
+      Console.WriteLine("Enter non-empty value");
+    }
+    else
+    {
+      string[] splitIntoArray = inputString.SplitString();
+      if(CheckArray())
+      {
+        Console.WriteLine ("Enter more than 2 words");
+      }
+      else
+      {
+        string[] lowerCasedArray = inputString.LowerCase();
+        int result = lowerCasedArray.CountWord();
+        Console.WriteLine(result);
+      }
+    }
+
   }
 }

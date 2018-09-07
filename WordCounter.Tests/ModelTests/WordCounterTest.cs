@@ -18,7 +18,7 @@ public class WordCounterTest
   [TestMethod]
   public void CheckString_EmptyString_String ()
   {
-    string word = "fwe";
+    string word = "";
     RepeatCounter inputString = new RepeatCounter(word);
     string result = inputString.CheckString();
     Assert.AreEqual(word, result);
