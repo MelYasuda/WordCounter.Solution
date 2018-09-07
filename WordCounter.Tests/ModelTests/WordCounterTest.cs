@@ -52,5 +52,14 @@ public class WordCounterTest
     string[] result = inputString.LowerCase();
     CollectionAssert.AreEqual(result, loweredArray);
   }
+  [TestMethod]
+  public void CountWord_CompareToTheFirstElement_Int ()
+  {
+    string word = "google google";
+    RepeatCounter inputString = new RepeatCounter(word);
+    // string gotString = inputString.GetString();
+    int result = inputString.CountWord();
+    Assert.AreEqual(result, 1);
+  }
 
 }

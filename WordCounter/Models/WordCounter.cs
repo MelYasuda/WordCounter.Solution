@@ -66,6 +66,22 @@ namespace WordCounter
       // }
       return splitedString;
     }
-  }
 
+    public int CountWord()
+    {
+      string[] splitedString = _inputString.Split(' ');
+
+      int count = 0;
+      for (int i = 1; i<splitedString.Length; i++)
+      if(splitedString[i] == splitedString[0])
+      {
+        count += 1;
+      }
+      else
+      {
+        count += 0;
+      }
+      return count;
+    }
+  }
 }
