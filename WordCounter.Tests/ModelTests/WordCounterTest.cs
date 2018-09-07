@@ -9,11 +9,18 @@ public class WordCounterTest
   [TestMethod]
   public void GetString_ReturnsAString_String ()
   {
-    RepeatCounter inputString = new RepeatCounter();
     string word = "google";
-    inputString.SetString(word);
+    RepeatCounter inputString = new RepeatCounter(word);
     string result = inputString.GetString();
     Assert.AreEqual(word, result);
+  }
+  [TestMethod]
+  public void CheckString_EmptyString_String ()
+  {
+    string word = "";
+    RepeatCounter inputString = new RepeatCounter(word);
+    string result = inputString.CheckString();
+    Assert.AreEqual("Enter non-empty value", result);
   }
 
 }

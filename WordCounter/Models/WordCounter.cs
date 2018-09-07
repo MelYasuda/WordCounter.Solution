@@ -7,13 +7,29 @@ namespace WordCounter.Models
   {
     private string _inputString;
 
+    public RepeatCounter(string inputString)
+    {
+      _inputString = inputString;
+    }
+
     public string GetString()
     {
       return _inputString;
     }
-    public void SetString(string inputString)
+    // public void SetString(string inputString)
+    // {
+    //   _inputString = inputString;
+    // }
+    public string CheckString ()
     {
-      _inputString = inputString;
+      if (_inputString == "")
+      {
+        return "Enter non-empty value";
+      }
+      else
+      {
+        return "good day";
+      }
     }
   }
 
