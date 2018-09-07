@@ -42,5 +42,15 @@ public class WordCounterTest
     string result = inputString.CheckArray();
     Assert.AreEqual(result, "you loser");
   }
+  [TestMethod]
+  public void LowerCase_ChangeUpperToLowerCase_Array ()
+  {
+    string[] loweredArray = {"google"};
+    string word = "Google";
+    RepeatCounter inputString = new RepeatCounter(word);
+    // string gotString = inputString.GetString();
+    string[] result = inputString.LowerCase();
+    CollectionAssert.AreEqual(result, loweredArray);
+  }
 
 }

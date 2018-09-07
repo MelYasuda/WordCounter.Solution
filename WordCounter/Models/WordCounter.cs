@@ -50,8 +50,21 @@ namespace WordCounter
       {
         return _inputString;
       }
+    }
 
-    
+    public string[] LowerCase()
+    {
+      string[] splitedString = _inputString.Split(' ');
+
+      for (int i = 0; i<splitedString.Length; i++)
+      {
+        splitedString[i] = splitedString[i].ToLower();
+      }
+      // foreach (string word in splitedString)
+      // {
+      //    splitedString = word.ToLower();
+      // }
+      return splitedString;
     }
   }
 
