@@ -21,7 +21,7 @@ public class WordCounterTest
     string word = "";
     RepeatCounter inputString = new RepeatCounter(word);
     string result = inputString.CheckString();
-    Assert.AreEqual(word, result);
+    Assert.AreEqual(false, result);
   }
   [TestMethod]
   public void SplitString_SplitBySpaces_List ()

@@ -20,7 +20,7 @@ namespace WordCounter
     // {
     //   _inputString = inputString;
     // }
-    public bool CheckString ()
+    public bool CheckString()
     {
       if (_inputString == "")
       {
@@ -28,7 +28,7 @@ namespace WordCounter
       }
       else
       {
-        return false;
+        return true;
       }
     }
 
@@ -94,14 +94,14 @@ namespace WordCounter
       RepeatCounter inputString = new RepeatCounter(userInput);
       // string checkedString = inputString.CheckString();
 
-      if(inputString.CheckString())
+      if(!inputString.CheckString())
       {
         Console.WriteLine("Enter non-empty value");
       }
       else
       {
         inputString.SplitString();
-        if(inputString.CheckArray())
+        if(!inputString.CheckArray())
         {
           Console.WriteLine ("Enter more than 2 words");
         }
