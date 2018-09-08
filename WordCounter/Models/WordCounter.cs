@@ -83,36 +83,35 @@ namespace WordCounter
       return count;
     }
   }
-}
 
-public class program
-{
-  public static void Main()
+  public class program
   {
-    Console.WriteLine("Enter words separated by spaces");
-    Console.WriteLine("I will count how many times the first word appears");
-    string userInput = Console.ReadLine();
-    RepeatCounter inputString = new RepeatCounter(userInput);
-    string checkedString = inputString.CheckString();
+    public static void Main()
+    {
+      Console.WriteLine("Enter words separated by spaces");
+      Console.WriteLine("I will count how many times the first word appears");
+      string userInput = Console.ReadLine();
+      RepeatCounter inputString = new RepeatCounter(userInput);
+      // string checkedString = inputString.CheckString();
 
-    if(inputString.CheckString())
-    {
-      Console.WriteLine("Enter non-empty value");
-    }
-    else
-    {
-      string[] splitIntoArray = inputString.SplitString();
-      if(CheckArray())
+      if(inputString.CheckString())
       {
-        Console.WriteLine ("Enter more than 2 words");
+        Console.WriteLine("Enter non-empty value");
       }
       else
       {
-        string[] lowerCasedArray = inputString.LowerCase();
-        int result = lowerCasedArray.CountWord();
-        Console.WriteLine(result);
+        inputString.SplitString();
+        if(inputString.CheckArray())
+        {
+          Console.WriteLine ("Enter more than 2 words");
+        }
+        else
+        {
+          inputString.LowerCase();
+          Console.WriteLine(inputString.CountWord());
+        }
       }
-    }
 
+    }
   }
 }
