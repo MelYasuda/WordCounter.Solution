@@ -20,8 +20,8 @@ public class WordCounterTest
   {
     string word = "";
     RepeatCounter inputString = new RepeatCounter(word);
-    string result = inputString.CheckString();
-    Assert.AreEqual(false, result);
+    bool result = inputString.CheckString();
+    Assert.AreEqual(result, true);
   }
   [TestMethod]
   public void SplitString_SplitBySpaces_List ()
@@ -39,8 +39,8 @@ public class WordCounterTest
     string word = "google";
     RepeatCounter inputString = new RepeatCounter(word);
     // string gotString = inputString.GetString();
-    string result = inputString.CheckArray();
-    Assert.AreEqual(result, "you loser");
+    bool result = inputString.CheckArray();
+    Assert.AreEqual(result, false);
   }
   [TestMethod]
   public void LowerCase_ChangeUpperToLowerCase_Array ()

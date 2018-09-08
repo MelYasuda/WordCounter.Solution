@@ -24,11 +24,11 @@ namespace WordCounter
     {
       if (_inputString == "")
       {
-        return false;
+        return true;
       }
       else
       {
-        return true;
+        return false;
       }
     }
 
@@ -94,7 +94,7 @@ namespace WordCounter
       RepeatCounter inputString = new RepeatCounter(userInput);
       // string checkedString = inputString.CheckString();
 
-      if(!inputString.CheckString())
+      if(inputString.CheckString())
       {
         Console.WriteLine("Enter non-empty value");
       }
