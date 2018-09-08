@@ -8,13 +8,13 @@
 Word Counter is a program that checks how frequently a word appears in a given string. The user should input both the word and a list of words to check. Check for full word matches only.
 
 ## Specification
-1. The program takes a string as an input and input string must not be an empty string.
+1. The program takes 2 strings as an input and input string must not be an empty string.
   input > ""
   output > "Enter non-empty value"
 
   ==>The input value is an empty string because it checks if the string is empty.
 
-2. The program splits the string into an array by spaces
+2. The program splits the second string into an array by spaces
   input > "google apple"
   output > {"google", "apple"}
 
@@ -32,9 +32,10 @@ Word Counter is a program that checks how frequently a word appears in a given s
 
   ==>The input value is {"Google"} to test if it returns a lower-cased word
 
-5. The program counts how many times the first word of the list appears in the list
-  input > {"google", "google"}
-  output > 1
+5. The program counts how many times the word
+appears in the list
+  input > "google" {"google", "google"}
+  output > 2
 
   ==>The input value is {"google", "google"} to test if it returns a count of the word
 

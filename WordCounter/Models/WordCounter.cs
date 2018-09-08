@@ -6,15 +6,21 @@ namespace WordCounter
   public class RepeatCounter
   {
     private string _inputString;
+    private string _inputWordList;
 
-    public RepeatCounter(string inputString)
+    public RepeatCounter(string inputString, string inputWordList)
     {
       _inputString = inputString;
+      _inputWordList = inputWordList;
     }
 
     public string GetString()
     {
       return _inputString;
+    }
+    public string GetWordList()
+    {
+      return _inputWordList;
     }
     // public void SetString(string inputString)
     // {
@@ -31,10 +37,22 @@ namespace WordCounter
         return false;
       }
     }
+    
+    public bool CheckWordList()
+    {
+      if (_inputWordList == "")
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
 
     public string[] SplitString()
     {
-      string[] splitedString = _inputString.Split(' ');
+      string[] splitedString = _inputWordList.Split(' ');
       return splitedString;
     }
 
@@ -51,7 +69,14 @@ namespace WordCounter
       }
     }
 
-    public string[] LowerCase()
+    public string LowerCaseString()
+    {
+      string loweredString = _inputString.ToLower();
+
+      return loweredString;
+    }
+
+    public string[] LowerCaseArray()
     {
       string[] splitedString = SplitString();
 
@@ -64,11 +89,12 @@ namespace WordCounter
 
     public int CountWord()
     {
-      string[] loweredString = LowerCase();
+      string[] loweredArray = LowerCaseArray();
+      string loweredString = LowerCaseString();
 
       int count = 0;
-      for (int i = 1; i<loweredString.Length; i++)
-      if(loweredString[i] == loweredString[0])
+      for (int i = 0; i<loweredArray.Length; i++)
+      if(loweredArray[i] == loweredString)
       {
         count += 1;
       }
@@ -84,13 +110,15 @@ namespace WordCounter
   {
     public static void Main()
     {
-      Console.WriteLine("Enter words separated by spaces");
+      Console.WriteLine("Enter a word");
+      string userInputString = Console.ReadLine();
+      Console.WriteLine("Enter a list of more than 2 words separated by spaces");
       Console.WriteLine("I will count how many times the first word appears");
-      string userInput = Console.ReadLine();
-      RepeatCounter inputString = new RepeatCounter(userInput);
+      string userInputWordList = Console.ReadLine();
+      RepeatCounter inputString = new RepeatCounter(userInputString, userInputWordList);
       // string checkedString = inputString.CheckString();
 
-      if(inputString.CheckString())
+      if(inputString.CheckString() || inputString.CheckWordList())
       {
         Console.WriteLine("Enter non-empty value");
       }
@@ -102,12 +130,11 @@ namespace WordCounter
           Console.WriteLine ("Enter more than 2 words");
         }
         else
+        inputString.LowerCaseArray();
         {
-          inputString.LowerCase();
           Console.WriteLine(inputString.CountWord());
         }
       }
-
     }
   }
 }
