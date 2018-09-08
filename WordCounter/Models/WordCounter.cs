@@ -40,7 +40,7 @@ namespace WordCounter
 
     public bool CheckArray()
     {
-      string[] splitedString = _inputString.Split(' ');
+      string[] splitedString = SplitString();
       if(splitedString.Length < 2 )
       {
         return false;
@@ -53,26 +53,22 @@ namespace WordCounter
 
     public string[] LowerCase()
     {
-      string[] splitedString = _inputString.Split(' ');
+      string[] splitedString = SplitString();
 
       for (int i = 0; i<splitedString.Length; i++)
       {
         splitedString[i] = splitedString[i].ToLower();
       }
-      // foreach (string word in splitedString)
-      // {
-      //    splitedString = word.ToLower();
-      // }
       return splitedString;
     }
 
     public int CountWord()
     {
-      string[] splitedString = _inputString.Split(' ');
+      string[] loweredString = LowerCase();
 
       int count = 0;
-      for (int i = 1; i<splitedString.Length; i++)
-      if(splitedString[i] == splitedString[0])
+      for (int i = 1; i<loweredString.Length; i++)
+      if(loweredString[i] == loweredString[0])
       {
         count += 1;
       }
