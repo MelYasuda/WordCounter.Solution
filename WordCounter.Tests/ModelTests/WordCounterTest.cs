@@ -11,6 +11,7 @@ public class WordCounterTest
   public void GetString_ReturnsAString_String ()
   {
     string word = "google";
+    string list = "google apple";
     RepeatCounter inputString = new RepeatCounter(word, list);
     string result = inputString.GetString();
     Assert.AreEqual(word, result);

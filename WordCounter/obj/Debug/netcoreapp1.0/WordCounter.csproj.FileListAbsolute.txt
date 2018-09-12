@@ -11,3 +11,10 @@ C:\Users\Melton\Desktop\word-counter\WordCounter\obj\Debug\netcoreapp1.0\WordCou
 C:\Users\Melton\Desktop\word-counter\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.AssemblyInfo.cs
 C:\Users\Melton\Desktop\word-counter\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.dll
 C:\Users\Melton\Desktop\word-counter\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.pdb
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.0\WordCounter.deps.json
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.0\WordCounter.dll
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\bin\Debug\netcoreapp1.0\WordCounter.pdb
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.csproj.CoreCompileInputs.cache
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.AssemblyInfo.cs
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.dll
+C:\Users\Melton\Desktop\WordCounter.Solution\WordCounter\obj\Debug\netcoreapp1.0\WordCounter.pdb

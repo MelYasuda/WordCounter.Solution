@@ -6716,11 +6716,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melton\\Desktop\\word-counter\\WordCounter\\WordCounter.csproj",
+      "projectUniqueName": "C:\\Users\\Melton\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
       "projectName": "WordCounter",
-      "projectPath": "C:\\Users\\Melton\\Desktop\\word-counter\\WordCounter\\WordCounter.csproj",
+      "projectPath": "C:\\Users\\Melton\\Desktop\\WordCounter.Solution\\WordCounter\\WordCounter.csproj",
       "packagesPath": "C:\\Users\\Melton\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melton\\Desktop\\word-counter\\WordCounter\\obj\\",
+      "outputPath": "C:\\Users\\Melton\\Desktop\\WordCounter.Solution\\WordCounter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Melton\\AppData\\Roaming\\NuGet\\NuGet.Config",
