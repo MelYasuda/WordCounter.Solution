@@ -7,6 +7,7 @@ namespace WordCounter.Models
   {
     private string _inputString;
     private string _inputWordList;
+    private string _result;
 
     public RepeatCounter(string inputString, string inputWordList)
     {
@@ -22,10 +23,16 @@ namespace WordCounter.Models
     {
       return _inputWordList;
     }
-    // public void SetString(string inputString)
-    // {
-    //   _inputString = inputString;
-    // }
+
+    public string GetResult()
+    {
+      return _result;
+    }
+    public void SetResult(string inputResult)
+    {
+      _result = inputResult;
+    }
+
     public bool CheckString()
     {
       if (_inputString == "")
