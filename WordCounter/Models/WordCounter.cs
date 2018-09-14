@@ -94,9 +94,20 @@ namespace WordCounter.Models
       return splitedString;
     }
 
-    public int CountWord()
+    public string[] EliminateDotComma()
     {
       string[] loweredArray = LowerCaseArray();
+
+      for (int i = 0; i<loweredArray.Length; i++)
+      {
+        loweredArray[i] = loweredArray[i].Trim( new Char[] { ',', '*', '.' } );
+      }
+      return loweredArray;
+    }
+
+    public int CountWord()
+    {
+      string[] loweredArray = EliminateDotComma();
       string loweredString = LowerCaseString();
 
       int count = 0;

@@ -7,15 +7,17 @@
   <body>
     <div class="container">
       <h1>Count your word!</h1>
+      <p>I will count whatever word you like! <br>You can enter any word and a sentence (or words separated by spaces), then I will check how many times your word is repeated in your sentence!</p>
+      <p>e.g. Your word: "Dogs" Your sentence: "I love dogs. Dogs are cute." Your word is repeated 2 times in your sentence.</p>
       <form action="/games" method="post">
         <label for="word">Enter a word:</label>
         <input id="word" name="word" type="text">
 
         <br>
 
-        <label for="word-list">Enter a word list separated by spaces:</label>
+        <label for="word-list">Enter a sentence separated by spaces:</label>
         <input id="word-list" name="word-list" type="text">
-        <button type="submit">Count!</button>
+        <br><button type="submit">Go!</button>
       </form>
     </div>
   </body>

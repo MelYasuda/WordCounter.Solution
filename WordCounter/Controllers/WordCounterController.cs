@@ -31,7 +31,7 @@ namespace WordCounter.Controllers
             return View("Result", inputString);
           }
           else
-          inputString.LowerCaseArray();
+          inputString.EliminateDotComma();
           {
             int count = inputString.CountWord();
             string result = "Your word is repeated " + count.ToString() + " time(s) in the word list.";
