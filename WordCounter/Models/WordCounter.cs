@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace WordCounter
+namespace WordCounter.Models
 {
   public class RepeatCounter
   {
@@ -37,7 +37,7 @@ namespace WordCounter
         return false;
       }
     }
-    
+
     public bool CheckWordList()
     {
       if (_inputWordList == "")
@@ -106,35 +106,35 @@ namespace WordCounter
     }
   }
 
-  public class program
-  {
-    public static void Main()
-    {
-      Console.WriteLine("Enter a word");
-      string userInputString = Console.ReadLine();
-      Console.WriteLine("Enter a list of more than 2 words separated by spaces");
-      Console.WriteLine("I will count how many times the first word appears");
-      string userInputWordList = Console.ReadLine();
-      RepeatCounter inputString = new RepeatCounter(userInputString, userInputWordList);
-      // string checkedString = inputString.CheckString();
-
-      if(inputString.CheckString() || inputString.CheckWordList())
-      {
-        Console.WriteLine("Enter non-empty value");
-      }
-      else
-      {
-        inputString.SplitString();
-        if(!inputString.CheckArray())
-        {
-          Console.WriteLine ("Enter more than 2 words");
-        }
-        else
-        inputString.LowerCaseArray();
-        {
-          Console.WriteLine(inputString.CountWord());
-        }
-      }
-    }
-  }
+  // public class program
+  // {
+  //   public static void Main()
+  //   {
+  //     Console.WriteLine("Enter a word");
+  //     string userInputString = Console.ReadLine();
+  //     Console.WriteLine("Enter a list of more than 2 words separated by spaces");
+  //     Console.WriteLine("I will count how many times the first word appears");
+  //     string userInputWordList = Console.ReadLine();
+  //     RepeatCounter inputString = new RepeatCounter(userInputString, userInputWordList);
+  //     // string checkedString = inputString.CheckString();
+  //
+  //     if(inputString.CheckString() || inputString.CheckWordList())
+  //     {
+  //       Console.WriteLine("Enter non-empty value");
+  //     }
+  //     else
+  //     {
+  //       inputString.SplitString();
+  //       if(!inputString.CheckArray())
+  //       {
+  //         Console.WriteLine ("Enter more than 2 words");
+  //       }
+  //       else
+  //       inputString.LowerCaseArray();
+  //       {
+  //         Console.WriteLine(inputString.CountWord());
+  //       }
+  //     }
+  //   }
+  // }
 }
