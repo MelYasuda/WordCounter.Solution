@@ -7,16 +7,16 @@ using WordCounter.Models;
 namespace WordCounter.Tests
 {
     [TestClass]
-    public class HomeControllerTest
+    public class WordCounterControllerTest
     {
       [TestMethod]
       public void Index_ReturnsCorrectView_True()
       {
           //Arrange
-          HomeController controller = new HomeController();
+          GamesController controller = new GamesController();
 
           //Act
-          ActionResult indexView = controller.Index();
+          ActionResult indexView = controller.InputForm();
 
           //Assert
           Assert.IsInstanceOfType(indexView, typeof(ViewResult));
