@@ -19,6 +19,27 @@
         <input id="word-list" name="word-list" type="text">
         <br><button type="submit">Go!</button>
       </form>
+
+      <br>
+
+      <p>The words you have entered:</p>
+      <ul>
+        @foreach(var word in Model)
+        {
+          <li>@word.GetString()</li>
+        }
+      </ul>
+
+      <br>
+
+      <p>The sentences you have entered:</p>
+      <ul>
+        @foreach(var sentence in Model)
+        {
+          <li>@sentence.GetWordList()</li>
+        }
+      </ul>
+
     </div>
   </body>
 </html>

@@ -9,10 +9,13 @@ namespace WordCounter.Models
     private string _inputWordList;
     private string _result;
 
+    private static List<RepeatCounter> _games = new List<RepeatCounter> {};
+
     public RepeatCounter(string inputString, string inputWordList)
     {
       _inputString = inputString;
       _inputWordList = inputWordList;
+      _games.Add(this);
     }
 
     public string GetString()
@@ -122,7 +125,12 @@ namespace WordCounter.Models
       }
       return count;
     }
+    public static List<RepeatCounter> GetAll()
+    {
+      return _games;
+    }
   }
+
 
   // public class program
   // {

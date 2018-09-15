@@ -9,7 +9,8 @@ namespace WordCounter.Controllers
     [HttpGet("/games")]
     public ActionResult InputForm()
     {
-      return View();
+      List<RepeatCounter> allGames = RepeatCounter.GetAll();
+      return View(allGames);
     }
 
     [HttpPost("/games")]
